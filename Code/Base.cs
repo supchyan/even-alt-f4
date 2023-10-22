@@ -4,16 +4,18 @@ using Terraria.ModLoader;
 using System;
 using System.Text;
 using System.IO;
+using Terraria.ModLoader.IO;
+using Terraria.ID;
 
 namespace EvenAltF4.Code {
     public class StopResetPosition:ModPlayer {
         private Vector2 playerLocation;
         public override void OnEnterWorld() {
-            // Main.NewText($"{Main.worldName}.txt");
             LoadLocation();
         }
-        public override void PostUpdate() {
+        public override void PreUpdateMovement() {
             playerLocation = Main.LocalPlayer.position;
+            if(!Main.LocalPlayer.active) return;
             SaveLocation();
         }
         public void LoadLocation() {
@@ -25,6 +27,7 @@ namespace EvenAltF4.Code {
                     tempArr = loc.Replace("{X:","").Replace("}","").Split(" Y:");
                     playerLocation.X = float.Parse(tempArr[0]);
                     playerLocation.Y = float.Parse(tempArr[1]);
+                    Main.LocalPlayer.AddBuff(ModContent.BuffType<DontDieBuff>(), 60);
                     Main.LocalPlayer.position = playerLocation;
                 }
             } catch {
