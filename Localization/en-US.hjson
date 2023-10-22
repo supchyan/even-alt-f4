@@ -2,8 +2,8 @@ Mods: {
 	EvenAltF4: {
 		Buffs: {
 			DontDieBuff: {
-				DisplayName: Dont Die Buff
-				Description: Mods.EvenAltF4.Buffs.DontDieBuff.Description
+				DisplayName: Immortal
+				Description: You are Immortal
 			}
 		}
 	}
