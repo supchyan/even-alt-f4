@@ -1,11 +1,8 @@
-using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ModLoader;
-using System;
-using System.Text;
 using System.IO;
-using Terraria.ModLoader.IO;
-using Terraria.ID;
+using System.Text;
+using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace EvenAltF4.Code {
     public class StopResetPosition:ModPlayer {
