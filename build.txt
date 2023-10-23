@@ -1,5 +1,5 @@
 displayName = Even Alt+F4
 author = supchyan
-version = 1.0
+version = 1.1
 hideCode = true
 hideResources = true
