@@ -1,6 +1,6 @@
-using Terraria;
 using System.IO;
 using System.Text;
+using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
@@ -24,7 +24,7 @@ namespace EvenAltF4.Code {
                     tempArr = loc.Replace("{X:","").Replace("}","").Split(" Y:");
                     playerLocation.X = float.Parse(tempArr[0]);
                     playerLocation.Y = float.Parse(tempArr[1]);
-                    Main.LocalPlayer.AddBuff(ModContent.BuffType<DontDieBuff>(), 60);
+                    Main.LocalPlayer.AddBuff(ModContent.BuffType<DontDieBuff>(), 120);
                     Main.LocalPlayer.position = playerLocation;
                 }
             } catch {
