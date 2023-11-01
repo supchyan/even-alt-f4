@@ -8,7 +8,6 @@ namespace EvenAltF4.Code {
         public override void SetStaticDefaults() {
             Main.buffNoSave[Type] = true;
 		}
-
 		public override void Update(Player player, ref int buffIndex) {
             int time = player.buffTime[buffIndex];
             Color col = new Color(255, 255, 2*time);
